@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Evolução</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="shortcut icon" href="icons/favicon.ico" type="image/x-icon">
+	</head>
+	<body class="subpage">
+			<header id="header" class="alt">
+				<div class="logo"><a href="index.html">Conheça Me<span> Abudo Ussene Ija Hassan</span></a></div>
+				<a href="#menu"><span>Menu</span></a>
+			</header>
+			<nav id="menu">
+				<ul class="links">
+					<li><a href="index.html"><img width="25", height="25" src="icons/square_14034325.png" alt="Home" srcset=""></a></li>
+					<li><a href="generic.html"><strong>Biografia</strong></a></li>
+					<li><a href="evolucao.html"><strong>Evolucao</strong></a></li>
+				</ul>
+			</nav>
+			<div id="main" class="container">
+					<h2>Edução / Formação</h2>
+					<ul>
+					<h5>Fundamental</h5>
+						<li>Escola primaria do 1 e 2 grau de unidade-pemba</li>
+					<h6>Inicio e Conclusão</h6>
+					<li>2005-2013</li>
+					<h5>Ensino Medio</h5>
+						<li>Escola Secundaria de Pemba</li>
+					<h6>Inicio e Conclusão</h6>
+					<li>2014-2018</li>
+					<h5>Curso Tecnico Profissional</h5>
+						<li>CPRD-Centro Provincial de Recursos Digitais de Pemba</li>
+						<h6>Inicio e Conclusão</h6>
+						<li>2018-2020</li>
+					<h5>Ensino Superior</h5>
+					<li>Universidade Rovuma-Nampula</li>
+					<h6>Inicio e Conclusão</h6>
+				    <li>2021-2025</li></ul>
+					<p>Bom este foi o meu percurso academico, Ate então estas foram as minha conquistas. Todas elas possuem uma certifição como comprovativos de participação e conclusão dos respectivos cursos e formação academica</p>
+
+					<div class="row">
+
+						<div class="6u 12u$(small)">
+							<h3>Estagios</h3>
+							<p>Ao longo da minha formação, tive o previlegio e prazer de poder estagiar. Em alguns locais com isso pude adquirir algumas habilidades e melhor algumas tambem.</p>
+							<h5>Locais de Estagios</h5>
+							<ul><li>Centro Provincial de Recursos Digitais</li>
+							<h6>Duração:1 Ano</h6>
+							<p>12 Meses:Janero de 2020 a Dezembro de 2020</p>
+							<li>Departamento de Tecnologias de Informçãoe Comunicação da Universidade Rovuma</li>
+							<h6>Duração:183 Dias</h6>
+							<p>6 Meses: Março de 2024 a Agosto de 2024 </p></ul>
+						</div>
+
+						<div class="6u$ 12u$(small)">
+							<h3>Habilidades</h3>
+							<p>Ao longo da minha formação academica e tecnico profissional, pude desenvolver varias habilidades na area das Tics e inter pessoais, abaixo sito as habilidades adquiridas.</p>
+							<li> Concerto e Manipulação de Computadores:Hardware e Software
+								<li>Manipulação de Rede de Computadores
+									<li>Programação Web
+										<li>Administração de Servidores: Ubuntu e Windows
+											<li>Administração de Redes
+												<li>Microsoft 360
+												<li>Administração de Base de Dados: Mysql,PostgreSQL,Oracle</li></li>
+											</li>
+										</li>
+									</li>
+								</li>
+							</li>
+							<h3>Linguagens de Programação</h3>
+							<li>Python
+								<li>Php
+									<li>JavaScrip
+										<li>ReactJs</li>
+									</li>
+									<li><h3>Linguas</h3></li>
+									<li>Portugues-Fluente</li>
+									<li>Inglesh-Fluente</li>
+									<li>Makua-Fluente</li>
+								</li>
+							</li>
+
+						</div>							
+							<!-- Lista -->
+							<h1>Programa de encriptação e desencriptação de ficheiros</h1>
+								<div class="row">
+									<div class="6u 12u$(small)">
+	<ul>
+<li>Pyhton.</li>
+	<div>
+		<h5>Gerando uma chave simetrica</h5>
+		<span class="image fit"><img src="python_pics/ENCRYPTIONPROJET – gerador_de_chave.py 7_30_2024 8_14_12 PM.png" alt=""></span>
+		<h6>codigo fonte</h6>
+		<code>from cryptography.fernet import  Fernet <br>
+			chave = Fernet.generate_key()<br>
+			#2 criamos um ficheiro chi.ch e atribuimos a variavel geradora de chaves Fernet.generate_key <br>
+			with open('chi.ch', 'wb') as file: <br>
+			file.write(chave) <br> 
+		</code> <br>
+		<h5>Criptografando os ficheiro com a chave</h5>
+		<span class="image fit"><img src="python_pics/ENCRYPTIONPROJET – gerador_de_chave.py 7_30_2024 8_14_24 PM.png" alt=""></span>
+		<h6>codigo fonte</h6>
+		<code>#1 Leitura da chave que esta no ficheiro criado chi.ch que esta na variavel chave <br>
+            chave = '' <br>
+            with open('chi.ch', 'rb') as file: <br>
+            chave = file.read() <br>
+            #2 Fazemos a litura do dado/ficheiro a encriptar <br>
+            dado = '' <br>
+            with open('exemplar CV.txt', 'rb') as file: <br>
+            dado = file.read() <br>
+            #3 Encriptando o dado/ficheiro cim o metodo fernet.encript(dado) <br>
+            from cryptography.fernet import Fernet <br>
+            f = Fernet(chave) <br>
+            dado_encriptado = f.encrypt(dado) <br>
+            #4 Salvamos o dado/ficheiro encriptado em uma variavel dado_encriptado <br>
+            with open('exemplar CV.txt', 'wb')as file: <br>
+            file.write(dado_encriptado) <br>
+            print('Ficheiro encriptado com sucesso \naqui esta o ficheiro:') <br>
+            print(dado_encriptado) <br>
+		</code> <br>
+		<h5>Desencriptando os ficheiros</h5>
+		<span class="image fit"><img src="python_pics/ENCRYPTIONPROJET – gerador_de_chave.py 7_30_2024 8_14_37 PM.png" alt=""></span> <br>
+		<h6>codigo fonte</h6>
+		<code>#1 ler a chave do file <br>
+			chave = '' <br>
+			with open('chi.ch', 'rb') as file: <br>
+				chave = file.read() <br>
+			#2 lendo o dado/ficheiro encriptado da variavel dado_encriptado <br>
+			dado_encriptado = '' <br>
+			with open('exemplar CV.txt', 'rb') as file: <br>
+				dado_encriptado = file.read() <br>
+			#3 Desemcriptamos o dado/ficheiro com o metodo Fernet mas antes atribuimos a chave au metodo <br>
+			from cryptography.fernet import Fernet <br>
+			f = Fernet(chave) <br>
+			#Desencriptando o ficheiro com_o metodo Fernet.decrypt dentro da variavel dedo_desencriptado que nos criamos <br>
+			#tribuimos a variavel dado_encriptado como argumento ao metodo f.decrypt() <br>
+			dado_desencriptado = f.decrypt((dado_encriptado)) <br>
+			print('Ficheiro Desencriptado com Sucesso\nAbaixo os ficheiro encriptado e desencriptados') <br>
+			print('Ficheiro encriptado\n',dado_encriptado.decode()) <br>
+			print('Ficheiro desencriptado\n',dado_desencriptado.decode()) <br>
+		</code> <br>
+					</div>
+				</ul>
+
+	<h4>Links Para Download</h4>
+		<ul class="alt">
+			<li>Download de certifição de Ensino Medio<br></li>
+				<p><a href="PDFs/Scanned_certificado12ª.pdf" download="Scanned_certificado12ª.pdf">Certificado12ª</a></p>
+				<li>Download de certifição do Curso Tecnico</li>
+				<p><a href="PDFs/CPRD-Certificado.pdf" download="CPRD-Certificado.pdf">CPRD-Certificado</a></p>
+				<li>Download de Curiculum Vitae</li>
+				<p><a href="PDFs/Professional CV Resume.pdf" download="Professional CV Resume.pdf">CV</a></p>
+					</ul>
+					<h1>Download de Projetos Em Python</h1>
+					<ul class="alt">
+						<li>Download de Projeto de Criador de QR_code</li>
+						<p><a href="Python_Prototipos/QRcode.zip" download="QRcode_criator.zip">QRcode_criator</a></p>
+						<li>Download de Projeto de Encriptação e Desencriptação</li>
+						<p><a href="Python_Prototipos/ENCRYPTIONPROJET.zip" download="ENCRYPTIONPROJET.zip">Projeto de Encriptação</a></p>
+					</ul>
+					<span class="image fit"><img src="I" alt="" /></span>
+					<div class="4u"><span class="image fit"><img src="#" alt="" /></span></div>
+										<div class="4u"><span class="image fit"><img src="#" alt="" /></span></div>
+										<div class="4u$"><span class="image fit"><img src="#" alt="" /></span></div>
+		</div>
+			<div class="6u$ 12u$(small)">
+								
+	<!-- Image -->
+	<h3>imagens do estagio</h3>
+	<h4>Centro Cultural & UniRovuma</h4>
+	<span class="image fit"><img src="IMGs/D65.jpg" alt="" /></span>
+		<div class="box alt">
+
+			<div class="row 50% uniform">
+										<div class="4u"><span class="image fit"><img src="images/ussene_estagio.jpg" alt="" /></span></div>
+										<div class="4u"><span class="image fit"><img src="IMGs/montando_server.jpg" alt="" /></span></div>
+										<div class="4u$"><span class="image fit"><img src="IMGs/teto.jpg" alt="" /></span></div>
+										<!-- Break -->
+										<div class="4u"><span class="image fit"><img src="iIMGs/grupo_router.jpg" alt="" /></span></div>
+										<div class="4u"><span class="image fit"><img src="images/router_residen.jpg" alt="" /></span></div>
+										<div class="4u$"><span class="image fit"><img src="IMGs/Rack.jpg" alt="" /></span></div>
+										<!-- Break -->
+										<div class="4u"><span class="image fit"><img src="images/Rackss.jpg" alt="" /></span></div>
+										<div class="4u"><span class="image fit"><img src="images/ur.jpg" alt="" /></span></div>
+	    <div class="4u$"><span class="image fit"><img src="images/WhatsApp Image 2024-05-08 at 16.04.05_b2b6e37d.jpg" alt="" /></span></div>
+	</div>
+</div>
+<div class="box">
+<h4>Montando rack &amp; Conectando os Pcs ao Switch</h4>
+<p><span class="image left"><img src="images/IMG-20240620-WA0022.jpg" alt="" /></span>Como ilustram as imagens, durante o meu estagio, pude instalar e montar um servidor, e tambem montar um rack para a aloção do mesmo. durante este estagio pude adquirir diversas habilidades, habilidades essas que estão a ser uteis e de uma grande valia, não para a minha vida academica mas tambem profissional.</p>
+<br>
+<br><br>
+<br>
+<span class="image right"><img src="images/u_and_m.jpg" alt="" /></span>A direita temo a foto da montagem do rack e o desempacotamento do servidor, servidor este que se encontra funcional no Centro Cultural da UniRovuma, foram montados dois servidores neste centro com o proposito de migração de plataforma digital, mais especificamente o web site e servicos de applicação</p>
+<br>
+<br>
+<h2>Contact Me</h2>
+<form action="#" method="post">
+
+<div class="field">
+<label for="message">Message</label>
+<textarea name="message" id="message" rows="6" placeholder="Message">Ola
+Agradeco sinceramente pela sua visita ao meu website. Foi um prazer recebê-lo(a) e espero que tenha encontrado todas as informações que procurava.
+Para futuras propostas de trabalho ou quaisquer outras questões, por favor, não hesite em me contatar através das minhas redes sociais:Estou sempre aberto a novas oportunidades e colaborações. Aguardo o seu contato!
+Atenciosamente,
+abudo ussene ija hassan</textarea>
+</div>
+</form>
+
+<ul class="icons">
+	<li><a href="https://linkedin.com/in/abudo-ussene-ija-hassan"> <span class="label"><img width="25", height="25" src="icons/linkedin (1).png" alt="Lin"></span></a></li>
+	<li><a href="hussenehassan19@gmail.com"> <span class="label"><img width="25", height="25" src="icons/gmail.png" alt="Email"></span></a></li>
+	<li><a href="https://github.com/Dully999"> <img width="25", height="25" src="icons/github.png" alt="Github"><span class="label"></span></a></li>
+	<li><a href="https://open.spotify.com/user/31ufe3dgruif4yqfyfmqo4p4vc4?si=g4KzFJOKSKWru4JYCbEhRA"><img width="25" height="25" src="icons/spotify.png" alt="spotify"></a></li>
+</ul>
+
+<div class="copyright">
+&copy; Design: <a href="https://hussenehassan19@gmail.com">ABUDO USSENE IJA HASSAN</a>.</a>.
+</div>
+
+</div>
+</footer>
+
+<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
